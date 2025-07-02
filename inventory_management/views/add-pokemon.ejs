@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Pokemon</title>
+</head>
+<body>
+  <h1>Add New Pokemon</h1>
+  <form action="/add-pokemon" method="post">
+    <label for="name">Pokemon Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="type_id">Type:</label>
+    <select id="type_id" name="type_id">
+      <% types.forEach(type => { %>
+        <option value="<%= type.id %>"><%= type.name %></option>
+      <% }) %>
+    </select><br>
+
+    <label for="trainer_id">Trainer:</label>
+    <select id="trainer_id" name="trainer_id">
+      <% trainers.forEach(trainer => { %>
+        <option value="<%= trainer.id %>"><%= trainer.name %></option>
+      <% }) %>
+    </select><br>
+
+    <button type="submit">Add Pokemon</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Club Messages</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <h1>Welcome to the Secret Club</h1>
+
+  <% if (user) { %>
+    <p>Welcome, <%= user.first_name %>!</p>
+    <a href="/new-message">Create New Message</a> |
+    <a href="/join-club">Join the Club</a> |
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <a href="/signup">Sign Up</a> | <a href="/login">Login</a>
+  <% } %>
+
+  <h2>Messages</h2>
+  <ul>
+    <% messages.forEach(message => { %>
+      <li>
+        <h3><%= message.title %></h3>
+        <p><%= message.text %></p>
+
+        <% if (user && user.is_member) { %>
+
+        <p><strong>By:</strong> <%= message.first_name %> <%= message.last_name %> | <%= new Date(message.created_at).toLocaleString() %></p>
+        <% } else { %>
+          <p><em>Join the club to see author details!</em></p>
+        <% } %>
+
+        <% if (user && user.is_admin) { %>
+          <form method="POST" action="/delete-message/<%= message.id %>">
+            <button type="submit">Delete</button>
+          </form>
+        <% } %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

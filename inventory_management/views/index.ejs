@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokemon Management App</title>
+</head>
+<body>
+  <h1>Welcome to Pokemon Management!</h1>
+
+  <h2>Types</h2>
+  <ul>
+    <% types.forEach(type => { %>
+      <li>
+        <a href="/types/<%= type.id %>"><%= type.name %></a>
+      </li>
+    <% }) %>
+  </ul>
+
+  <h2>Trainers</h2>
+  <ul>
+    <% trainers.forEach(trainer => { %>
+      <li>
+        <a href="/trainer/<%= trainer.id %>"><%= trainer.name %></a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/add-trainer">Add a new Trainer</a>
+</body>
+</html>

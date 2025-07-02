@@ -1,0 +1,15 @@
+[]Hello there!
+[]My name is Yash Pratap Kulshrestha.
+[]I am Computer Science Major.
+[]Presently, I am pursuing my B.Tech degree.
+[]I am doing it from Poornima University.
+[]Which is present in Jaipur (Rajasthan).
+[]Jaipur is very good place.
+[]It has so many places to visit.
+[]Rust: fn main (i: i32, u: char) {
+[]    println!("Hello World");
+[]}
+[]Suck my dick niggas.
+[]Fuck you all.
+[]Damn I am gonna learn NeoVim today.
+[]       I am not going to join someone else's wedding.

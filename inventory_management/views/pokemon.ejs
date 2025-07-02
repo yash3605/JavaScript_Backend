@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokemons</title>
+</head>
+<body>
+  <h1>Pokemons (Filtered by <%= filter %>)</h1>
+  <ul>
+    <% pokemons.forEach(pokemon => { %>
+      <li>
+        <strong><%= pokemon.name %></strong>
+        (Type: <%= pokemon.type || 'None' %>, Trainer: <%= pokemon.trainer || 'None' %>)
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/">Back to Home</a> |
+  <a href="/add-pokemon">Add a new Pokemon</a>
+</body>
+</html>

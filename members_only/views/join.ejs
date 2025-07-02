@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join the Club</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <h1>Join the Club</h1>
+  <% if (messages && messages.length) { %>
+    <ul>
+      <% messages.forEach(msg => { %>
+        <li><%= msg %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+  <form method="POST" action="/join-club">
+    <label>Enter Secret Passcode: <input type="text" name="passcode" required></label><br>
+    <button type="submit">Join!</button>
+  </form>
+</body>
+</html>
